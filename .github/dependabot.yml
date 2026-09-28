@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Nur Sicherheits-PRs: open-pull-requests-limit: 0 unterdrückt reguläre
+  # Versions-Updates, Sicherheitslücken sind davon laut GitHub ausgenommen
+  # und lösen trotzdem automatisch PRs aus.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
